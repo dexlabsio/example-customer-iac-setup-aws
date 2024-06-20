@@ -1,11 +1,11 @@
 provider "aws" {
-  region = "us-east-1"
+  region = "us-east-1" # CHANGE ME
 }
 
 terraform {
   backend "s3" {
-    bucket  = "dexlabs-tf-state-store-customerx"
-    key  = "terraform/state/default.tfstate"
+    bucket  = "dexlabs-tf-state-store-customerx" # CHANGE ME
+    key  = "terraform/state/dex/default.tfstate"
     region = "us-east-1"
   }
   
