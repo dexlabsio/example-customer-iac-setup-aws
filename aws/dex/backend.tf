@@ -3,11 +3,12 @@ provider "aws" {
 }
 
 terraform {
-  backend "s3" {
-    bucket  = "dexlabs-tf-state-store-customerx" # CHANGE ME
-    key  = "terraform/state/dex/default.tfstate"
-    region = "us-east-1"
-  }
+  ## (Advanced and optional) Use this if you want to keep an s3 tfstate
+  # backend "s3" {
+  #   bucket  = "dexlabs-tf-state-store-customerx" # CHANGE ME
+  #   key  = "terraform/state/dex/default.tfstate"
+  #   region = "us-east-1"
+  # }
   
   required_providers {
     aws = {
